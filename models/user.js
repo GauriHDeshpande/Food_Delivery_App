@@ -11,10 +11,9 @@ const userSchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    userName: {
-        type: String,
-        required : true
-    }
+    // userName: {
+    //     type: String,
+    // }
 }, {timestamps: true});
 
 // pre-save is a trigger that gets a function and execute before the user object is saved.
