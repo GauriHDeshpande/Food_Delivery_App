@@ -44,15 +44,15 @@ async(email, password, done) => {
 
 passport.use(new JWTStrategy(
     {
-        secretOrKey: "TOP_SECRET",
-        jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret_token'),
+        secretOrKey: 'TOP-SECRET',
+        jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret-token'),
     },
     async(token, done) => {
-        try{
-            return done(null,token.user);
-        }catch(err){
+        try{ 
+            return done(null, token.user);
+        } catch(err){
             console.log(err);
             return done(err);
         }
     }
-))
+));
